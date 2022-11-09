@@ -1,0 +1,34 @@
+[
+  {
+    "method": "GET",
+    "endpoint": "/{param_1}/{param_2}/clone",
+    "path_params": {
+      "param_1": "1",
+      "param_2": "test"
+    },
+    "query_params": {
+      "ids": ["abd", "csf"],
+      "org_id": "organization"
+    },
+    "response": {
+      "data": "response_example"
+    },
+    "response_code": 200
+  },
+  {
+    "method": "POST",
+    "endpoint": "/data/encode",
+    "path_params": {},
+    "query_params": {},
+    "body": {
+      "data": "e468ce8b727702fc8151b35e9564995ad7d27fd523428e236e1d08fe638e6d01",
+      "user_id": "test",
+      "organization_id": "12345678",
+      "scope": "big-file-db"
+    },
+    "response": {
+      "data": "1"
+    },
+    "response_code": 200
+  }
+]
