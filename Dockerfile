@@ -1,4 +1,4 @@
-FROM python:3.7-slim as build
+FROM python:3.11-slim AS build
 
 WORKDIR /usr/app
 RUN python -m venv /usr/app/venv
@@ -8,7 +8,7 @@ COPY requirements.txt .
 RUN pip install -r requirements.txt
 
 
-FROM python:3.7-slim
+FROM python:3.11-slim
 RUN groupadd -g 999 python && \
     useradd -r -u 999 -g python python
 

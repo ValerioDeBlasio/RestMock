@@ -11,8 +11,8 @@ from pydantic import BaseModel
 class ApiMockModel(BaseModel):
     method: str
     endpoint: str
-    path_params: Optional[Dict[str, str]]
-    query_params: Optional[Dict[str, Union[str, List[str]]]]
-    body: Optional[Dict]
+    path_params: Dict[str, str] | None = {}
+    query_params: Dict[str, Union[str, List[str]]] | None = {}
+    body: Dict | None = {}
     response: Dict
-    response_code: Optional[int]
+    response_code: int | None = 200

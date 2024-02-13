@@ -1,5 +1,6 @@
 from typing import List
 
+import uvicorn
 from fastapi import FastAPI, Request
 import json
 import os
@@ -42,3 +43,4 @@ async def put(request: Request):
 @app.delete("/{full_path:path}")
 async def delete(request: Request):
     return await extract_response(endpoint_mapping.get('DELETE'), request)
+
